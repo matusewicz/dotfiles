@@ -1,0 +1,28 @@
+[push]
+    default = simple
+[user]
+    name = Jan Matusewicz
+    email = jan.matusewicz@icloud.com
+[branch "master"]
+    rebase = true
+[alias]
+    br = branch
+    cm = commit
+    cma = commit --amend
+    cmf = commit --fixup
+    co = checkout
+    fe = fetch
+    fa = fetch --all
+    pr = pull --rebase
+    rc = rebase --continue
+    ra = rebase --abort
+    ri = rebase -i
+    ris = rebase -i --autosquash
+    st = status
+    dc = diff --cached
+    df = diff
+    logns = log --name-status --no-merges
+    unstage = reset HEAD
+    pushdel = "!f() { \
+                    git push origin --delete $(git rev-parse --abbrev-ref HEAD); \
+                }; f"
